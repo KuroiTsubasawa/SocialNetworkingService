@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: lightcyan ;
+    font-family: tahoma;
+}
+header{
+    display: flex;
+    background-color: lightgray;
+    color: black;
+    justify-content: center;
+}
+header div{
+    padding: 20px;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+
+#signup-form form {
+    width: 60%; 
+    margin: 10px; 
+}
