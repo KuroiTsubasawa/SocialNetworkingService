@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <body>
     <?php require_once 'header.php'; ?>
 
-    <div id="login-form" class="d-flex justify-content-center">
+    <div id="login-form" class="d-flex justify-content-center flex-column align-items-center">
 
 
         <div class='alert alert-danger' role='alert'>

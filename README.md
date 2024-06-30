@@ -1,5 +1,9 @@
-Social networking service aplication
+Social networking service application
 
--- a structure for logging in and registration has been created, 
-as well as the home page and the "my account" page, currently 
-without any logic and a server --
+Created communication with database
+new functions:
+create users at signup.php
+logging system at login.php
+
+fixed style at page login.php
+added descriptions
