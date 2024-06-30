@@ -32,3 +32,9 @@ footer{
     width: 60%; 
     margin: 10px; 
 }
+
+#login-form form {
+    width: 60%;
+    margin: 10px;
+}
+
