@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $result = mysqli_query($conn, $query);
 
     if (($result->num_rows) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['info'] = $row;
         header('Location: profile.php');
         exit;
     } else {
@@ -39,13 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div id="login-form" class="d-flex justify-content-center flex-column align-items-center">
 
 
-        <div class='alert alert-danger' role='alert'>
-            <?php
-            if (!empty($error)) {
-                echo "$error";
-            }
-            ?>
-        </div>
+
+        <?php
+
+        if (!empty($error)) {
+            echo "<div class='alert alert-danger' role='alert'>" . $error . "</div>";
+        }
+        ?>
+
 
 
 
@@ -53,11 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <h2><b>Login</b></h2>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" require>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" name="password" require>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="password" required>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">

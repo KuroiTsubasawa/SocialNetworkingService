@@ -1,3 +1,11 @@
+<?php
+require "function.php";
+
+checkLogin();
+
+print_r($_GET);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
